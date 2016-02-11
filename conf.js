@@ -1,8 +1,8 @@
 exports.config = {
     framework: 'jasmine',
-    seleniumAddress: 'http://localhost:4444/wd/hub',
-    //sauceUser: 'devsauce',
-    //sauceKey: '466e9ed5-4656-45d3-868d-264ac1bc25d0',
+    //seleniumAddress: 'http://localhost:4444/wd/hub',
+    sauceUser: 'cims_sauce',
+    sauceKey: '529debcb-67fe-453f-9626-860fb7523b97',
     specs: ['spec.js'],
     //mochaOpts: {
     //    reporter: 'list'
@@ -11,5 +11,16 @@ exports.config = {
         environment: 'https://weather.com/',
         //breakpoint: '1200 x 1222',
         //browser: 'chrome',
-    }
+    },
+    mochaOpts: {
+        timeout: 10000
+    },
+    before: function() {
+        var chai = require('chai');
+        var chaiAsPromised = require('chai-as-promised');
+
+        chai.use(chaiAsPromised);
+        expect = chai.expect;
+        chai.Should();
+    },
 }
