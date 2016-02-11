@@ -15,12 +15,7 @@ exports.config = {
     mochaOpts: {
         timeout: 10000
     },
-    before: function() {
-        var chai = require('chai');
-        var chaiAsPromised = require('chai-as-promised');
-
-        chai.use(chaiAsPromised);
-        expect = chai.expect;
-        chai.Should();
-    },
+    jasmineNodeOpts: {
+        defaultTimeoutInterval: 30000
+    }
 }
