@@ -1,6 +1,8 @@
 exports.config = {
     framework: 'mocha',
     specs: ['spec.js'],
+    sauceUser: 'cims123$',
+    sauceKey: '529debcb-67fe-453f-9626-860fb7523b97',
     capabilities: {
         'browserName': 'chrome',
     },
