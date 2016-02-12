@@ -5,6 +5,6 @@ exports.config = {
     specs: ['spec.js'],
     capabilities: {
         'browserName': 'chrome',
-        'tunnel-identifier': 'bdd01',
+        'tunnel-identifier': 'bdd07',
     }
 }
