@@ -1,5 +1,10 @@
 describe('Protractor Demo App', function() {
 
+    var chai = require('chai');
+    chai.use(require('chai-as-promised'));
+
+    var expect = chai.expect;
+
     it('should have a title', function() {
 
         var homePage = browser.params.environment;
